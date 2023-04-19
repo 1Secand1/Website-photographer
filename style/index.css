@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@550&display=swap");
+body {
+  height: 100%;
+  background: white;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 550;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  height: 80px;
+  border-bottom: solid 2px #666666;
+}
+
+main {
+  width: 100vw;
+}
+
+button {
+  padding: 20px;
+  background: none;
+  border: solid 2px #696464;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.preview {
+  width: 100%;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  display: flex;
+  position: relative;
+  margin: auto;
+}
+.preview__img {
+  width: 100%;
+}
+.preview--positioning {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 80px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+.preview__box {
+  width: 100%;
+  margin-top: 30px;
+}
+.preview__subtitle {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.preview__title {
+  margin-top: 15px;
+  color: white;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+}
+.preview__social-networks {
+  display: grid;
+  gap: 24px;
+}
+.preview__btn {
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 50px;
+  color: white;
+}
+
+.about-me {
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
+  gap: 16px;
+  line-height: 180%;
+}
+.about-me__title {
+  width: 100%;
+  text-align: center;
+  grid-area: 1/1/2/4;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 800;
+}
+.about-me__photos-first-block {
+  display: grid;
+  grid-area: 2/1/3/2;
+  margin-bottom: auto;
+  padding-top: 7px;
+  gap: 20px;
+}
+.about-me__test-first-block {
+  display: grid;
+  grid-area: 2/2/3/4;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  margin-left: auto;
+  gap: 30px;
+}
+.about-me__photos-second-block {
+  grid-area: 3/3/4/4;
+  padding-top: 7px;
+}
+.about-me__img {
+  width: 150px;
+  height: 250px;
+}
+.about-me__test-second-block {
+  grid-area: 3/1/4/3;
+}
+.about-me__test-third-block {
+  grid-area: 4/1/5/4;
+}
+
+.stages-of-work {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 100px;
+}
+.stages-of-work__title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 800;
+}
+.stages-of-work__box {
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  gap: 20px;
+}
+.stages-of-work__box--reverse {
+  flex-direction: row-reverse;
+}
+.stages-of-work__content {
+  max-width: 200px;
+}
+@media screen and (min-width: 768px) {
+  .about-me {
+    display: grid;
+    margin-top: 200px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 0.5fr repeat(3, auto);
+  }
+  .about-me__title {
+    width: 100%;
+    grid-area: 1/2/2/4;
+  }
+  .about-me__photos-first-block {
+    width: 200px;
+    position: relative;
+    grid-area: 1/1/4/2;
+  }
+  .about-me__test-first-block {
+    margin-top: auto;
+    margin-left: -30px;
+    max-width: 770px;
+    gap: 40px;
+    grid-area: 2/2/3/4;
+  }
+  .about-me__photos-second-block {
+    grid-area: 3/3/5/4;
+  }
+  .about-me__test-second-block {
+    margin-top: 50px;
+    margin-left: -150px;
+    max-width: 600px;
+    grid-area: 3/2/4/3;
+  }
+  .about-me__test-third-block {
+    grid-area: 4/1/5/3;
+  }
+  .about-me__img {
+    width: 200px;
+    height: 300px;
+  }
+  .about-me__photos-first-block--right-shift {
+    position: absolute;
+    left: 120px;
+    border: solid;
+  }
+  .about-me__photos-first-block--upward-shift {
+    position: absolute;
+    top: 190px;
+    z-index: -1;
+    border: solid;
+  }
+}
