@@ -1,14 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,600;0,700;0,800;1,500&display=swap");
+body::-webkit-scrollbar {
+    background: #43474e;
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    background: #2f3136;
+    border-radius: 10px;
+}
 
 body {
+    display: flex;
+    flex-direction: column;
     height: 100%;
 
     background: white;
 
     font-family: "Montserrat", sans-serif;
-    font-weight: 550;
+    font-weight: 600;
+    font-size: 12px;
+    // overflow-x: hidden;
+}
 
-    overflow-x: hidden;
+* {
+    box-sizing: border-box;
 }
 
 header {
@@ -21,11 +35,6 @@ header {
 
 main {
     width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
 }
 
 button {
@@ -33,7 +42,19 @@ button {
     background: none;
     border: solid 2px #696464;
 }
+
+.img {
+    // min-width: 120px;
+    // min-height: 171px;
+    width: 120px;
+    height: 171px;
+}
 .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .preview {
@@ -44,9 +65,6 @@ button {
     position: relative;
     margin: auto;
 
-    &__img {
-        width: 100%;
-    }
     &--positioning {
         position: absolute;
         transform: translateX(-50%);
@@ -90,68 +108,12 @@ button {
 
         color: white;
     }
+    &__img {
+        width: 100%;
+    }
 }
 
 .about-me {
-    display: grid;
-
-    margin-top: 40px;
-
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(4, auto);
-    gap: 16px;
-
-    line-height: 180%;
-    font-family: "Montserrat", sans-serif;
-
-    &__title {
-        width: 100%;
-        text-align: center;
-        grid-area: 1 / 1 / 2 / 4;
-
-        margin-bottom: 30px;
-
-        font-size: 28px;
-        font-weight: 800;
-    }
-
-    &__photos-first-block {
-        display: grid;
-        grid-area: 2 / 1 / 3 / 2;
-        margin-bottom: auto;
-
-        padding-top: 7px;
-        gap: 20px;
-    }
-
-    &__test-first-block {
-        display: grid;
-        grid-area: 2 / 2 / 3 / 4;
-
-        width: 100%;
-        height: max-content;
-
-        margin-left: auto;
-        gap: 30px;
-    }
-
-    &__photos-second-block {
-        grid-area: 3 / 3 / 4 / 4;
-        padding-top: 7px;
-    }
-
-    &__img {
-        width: 150px;
-        height: 250px;
-    }
-
-    &__test-second-block {
-        grid-area: 3 / 1 / 4 / 3;
-    }
-
-    &__test-third-block {
-        grid-area: 4 / 1 / 5 / 4;
-    }
 }
 
 .stages-of-work {
@@ -189,8 +151,8 @@ button {
         height: max-content;
     }
     &__img {
-        width: 250px;
-        height: 350px;
+        width: 130px;
+        height: 214px;
     }
     &__box-title {
         font-size: 18px;
@@ -201,27 +163,28 @@ button {
 }
 
 .sign-up {
-    position: relative;
+    display: grid;
+    justify-content: center;
+
+    background: #000;
+
+    margin-top: 100px;
+    padding-left: 16px;
+    padding-right: 16px;
     &__form {
         display: grid;
         max-width: 500px;
 
-        margin: auto;
         padding: 50px 0;
-        margin-top: 100px;
 
         color: white;
-        position: relative;
     }
     &__img-background {
-        top: 0;
-        z-index: -1;
-        width: 100vw;
-        height: 100%;
-        position: absolute;
-        margin-left: calc(50% - 50vw - 16px);
-
-        background: black;
+        width: 100vw; /* ширина блока на всю ширину окна */
+        max-width: 100%; /* максимальная ширина блока не должна превышать фиксированную ширину контейнера */
+        margin-left: calc(50% - 50vw); /* позиционирование блока по центру экрана */
+        margin-right: calc(50% - 50vw);
+        background: #000;
     }
     &__title {
         text-align: center;
@@ -269,81 +232,103 @@ button {
     }
 }
 
-.sign-up {
-}
-.sign-up__title {
-}
-.sign-up__text {
-}
-.sign-up__input {
+.rates {
+    position: relative;
+    min-height: 100vh;
+    &__title {
+        margin-top: 150px;
+        text-align: center;
+
+        font-size: 28px;
+        font-weight: 800px;
+    }
+    &__content {
+        display: grid;
+        justify-content: center;
+
+        height: 100%;
+        gap: 60px;
+        margin-top: 50px;
+    }
+    &__logo {
+        position: absolute;
+        right: 0;
+
+        width: 100px;
+        height: 100px;
+    }
+    &__box {
+        display: grid;
+        width: 300px;
+        justify-content: center;
+
+        margin: auto;
+
+        padding: 20px;
+        border: solid 2px;
+    }
+    &__box-title {
+        text-align: center;
+        font-size: 24px;
+    }
+    &__list {
+        display: grid;
+        margin-top: 35px;
+        gap: 20px;
+    }
+    &__sheet-element {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__price {
+        margin-top: 70px;
+        width: 250px;
+
+        padding: 20px 0;
+        border-top: solid 1px;
+        border-bottom: solid 1px;
+
+        text-align: center;
+        font-size: 18px;
+        font-weight: 800;
+    }
+    &__btn {
+        margin-top: 50px;
+        font-weight: 600;
+        font-size: 18px;
+        padding: 12px 0;
+    }
 }
 
 @media screen and (min-width: 1200px) {
 }
 
 @media screen and (min-width: 992px) {
-}
-
-@media screen and (min-width: 768px) {
-    .about-me {
-        display: grid;
-
-        margin-top: 200px;
-        grid-template-columns: repeat(3, auto);
-        grid-template-rows: 0.5fr repeat(3, auto);
-
-        &__title {
-            width: 100%;
-            grid-area: 1 / 2 / 2 / 4;
+    .rates {
+        &__content {
+            display: flex;
         }
-
-        &__photos-first-block {
-            width: 200px;
-            position: relative;
-            grid-area: 1 / 1 / 4 / 2;
+        &__margin-top-100 {
+            margin-top: 100px;
         }
-
-        &__test-first-block {
-            margin-top: auto;
-            margin-left: -30px;
-            max-width: 770px;
-            gap: 40px;
-            grid-area: 2 / 2 / 3 / 4;
+        &__margin-top-200 {
+            margin-top: 200px;
         }
-
-        &__photos-second-block {
-            grid-area: 3 / 3 / 5 / 4;
-        }
-
-        &__test-second-block {
-            margin-top: 50px;
-            margin-left: -150px;
-            max-width: 600px;
-            grid-area: 3 / 2 / 4 / 3;
-        }
-
-        &__test-third-block {
-            grid-area: 4 / 1 / 5 / 3;
-        }
-
-        &__img {
-            width: 200px;
-            height: 300px;
-        }
-
-        &__photos-first-block--right-shift {
-            position: absolute;
-            left: 120px;
-            border: solid;
-        }
-        &__photos-first-block--upward-shift {
-            position: absolute;
-            top: 190px;
-            z-index: -1;
-            border: solid;
+        &__margin-top-300 {
+            margin-top: 300px;
         }
     }
 }
 
+@media screen and (min-width: 768px) {
+}
+
 @media screen and (min-width: 576px) {
+    .img {
+        width: 180px;
+        height: 256px;
+    }
+    body {
+        font-size: 16px;
+    }
 }
