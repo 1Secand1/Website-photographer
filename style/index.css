@@ -1,10 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@550&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,600;0,700;0,800;1,500&display=swap");
 body {
   height: 100%;
   background: white;
-  font-size: 16px;
   font-family: "Montserrat", sans-serif;
   font-weight: 550;
   overflow-x: hidden;
@@ -19,21 +16,18 @@ header {
 }
 
 main {
-  width: 100vw;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 button {
   padding: 20px;
   background: none;
   border: solid 2px #696464;
-}
-
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 .preview {
@@ -93,6 +87,7 @@ button {
   grid-template-rows: repeat(4, auto);
   gap: 16px;
   line-height: 180%;
+  font-family: "Montserrat", sans-serif;
 }
 .about-me__title {
   width: 100%;
@@ -134,11 +129,14 @@ button {
 }
 
 .stages-of-work {
+  max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   margin-top: 100px;
+  line-height: 180%;
+  font-family: "Montserrat", sans-serif;
 }
 .stages-of-work__title {
   width: 100%;
@@ -151,14 +149,90 @@ button {
   width: -moz-max-content;
   width: max-content;
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 .stages-of-work__box--reverse {
   flex-direction: row-reverse;
 }
 .stages-of-work__content {
-  max-width: 200px;
+  max-width: 250px;
+  height: -moz-max-content;
+  height: max-content;
 }
+.stages-of-work__img {
+  width: 250px;
+  height: 350px;
+}
+.stages-of-work__box-title {
+  font-size: 18px;
+  font-weight: 800;
+}
+.sign-up {
+  position: relative;
+}
+.sign-up__form {
+  display: grid;
+  max-width: 500px;
+  margin: auto;
+  padding: 50px 0;
+  margin-top: 100px;
+  color: white;
+  position: relative;
+}
+.sign-up__img-background {
+  top: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  margin-left: calc(50% - 50vw - 16px);
+  background: black;
+}
+.sign-up__title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+}
+.sign-up__subject {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+}
+.sign-up__text {
+  margin-top: 40px;
+  font-style: 18px;
+}
+.sign-up__input-box {
+  margin-top: 30px;
+  display: grid;
+  gap: 20px;
+}
+.sign-up__input {
+  background: none;
+  border: solid 2px white;
+  padding-top: 30px;
+  padding-left: 5px;
+  color: white;
+  font-size: 18px;
+}
+.sign-up__input::-moz-placeholder {
+  color: white;
+}
+.sign-up__input::placeholder {
+  color: white;
+}
+.sign-up__input::-webkit-calendar-picker-indicator {
+  background-image: url("/img/sign-up/calendar-icon.svg");
+}
+.sign-up__btn {
+  border: solid white;
+  margin-top: 70px;
+  color: white;
+  font-style: 18px;
+}
+
 @media screen and (min-width: 768px) {
   .about-me {
     display: grid;
