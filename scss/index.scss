@@ -251,14 +251,14 @@ button {
         margin-top: 50px;
     }
     &__logo {
-        position: absolute;
-        right: 0;
-
+        display: block;
+        margin-left: auto;
         width: 100px;
         height: 100px;
     }
     &__box {
         display: grid;
+
         width: 300px;
         justify-content: center;
 
@@ -297,6 +297,16 @@ button {
         font-weight: 600;
         font-size: 18px;
         padding: 12px 0;
+    }
+}
+
+.reviews {
+    min-height: 50vw;
+    &__profile {
+    }
+    &__text {
+    }
+    &__slider {
     }
 }
 

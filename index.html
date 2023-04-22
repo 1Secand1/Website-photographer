@@ -38,7 +38,7 @@
       <div class="container preview--positioning">
         <div class="preview__box">
           <h3 class="preview__subtitle">ФОТОГРАФ</h3>
-          <h1 class="preview__title">Stasia <br> Sandul </h1>
+          <h1 class="preview__title">Stasia <br> San dul </h1>
 
         </div>
         <ul class="preview__social-networks">
@@ -52,8 +52,8 @@
       <img class="preview__img" src="https://imgholder.ru/400x600/8493a8/adb9ca&text=400x600&font=kelson"
         alt="Фотография фотогрфа">
     </section>
-    <!-- 
-    <section class="container about-me ">
+
+    <!--  <section class="container about-me ">
       <h2 class="about-me__title">ОБО МНЕ</h2>
 
       <div class="about-me__photos-first-block">
@@ -195,8 +195,8 @@
       </form>
     </section>
 
-    <img class="rates__logo" src="" alt="логотип">
     <section class="rates container">
+      <img class="rates__logo" src="" alt="логотип">
       <h2 class="rates__title">ТАРИФЫ</h2>
       <div class="rates__content">
 
@@ -262,24 +262,39 @@
       </div>
     </section>
 
-    <!-- <section class="reviews">
-      <img class="reviews__profile photo" src="" alt="">
+    <section class="reviews">
+      <div id="anycomment-app"></div>
+      <!-- <img class="reviews__profile" src="" alt="">
 
       <div>
-        <p class="reviews__text"></p>
+
+        <p class="reviews__text">
+          "Была на фотосессии у Регины дважды и осталась очень довольна! Во-первых с ней легко работать, интересно и
+          весело. Она всегда подскажет какой ракурс лучше и работы получаются прекрасные, спасибо большое)"
+        </p>
         <div class="reviews__slider">
-          <img src="" alt="">
           <img src="" alt="">
           <img src="" alt="">
         </div>
         <p>Смотреть больше фото с фотосесии</p>
-      </div>
-    </section> -->
+      </div> -->
 
   </main>
-
+  <script>
+    AnyComment = window.AnyComment || []; AnyComment.Comments = [];
+    AnyComment.Comments.push({
+      "root": "anycomment-app",
+      "app_id": 5337,
+      "language": "ru"
+    })
+    var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+    s.src = "https://widget.anycomment.io/comment/embed.js";
+    var sa = document.getElementsByTagName("script")[0];
+    sa.parentNode.insertBefore(s, s.nextSibling);
+  </script>
   <footer>
   </footer>
+
 </body>
 
 </html>

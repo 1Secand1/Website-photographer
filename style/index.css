@@ -228,8 +228,8 @@ button {
   margin-top: 50px;
 }
 .rates__logo {
-  position: absolute;
-  right: 0;
+  display: block;
+  margin-left: auto;
   width: 100px;
   height: 100px;
 }
@@ -271,6 +271,9 @@ button {
   padding: 12px 0;
 }
 
+.reviews {
+  min-height: 50vw;
+}
 @media screen and (min-width: 992px) {
   .rates__content {
     display: flex;
