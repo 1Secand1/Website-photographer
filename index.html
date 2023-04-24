@@ -34,8 +34,8 @@
       </ul>
     </header> -->
 
-    <section class="preview">
-      <div class="container preview--positioning">
+    <section class="preview container">
+      <div class=" preview--positioning">
         <div class="preview__box">
           <h3 class="preview__subtitle">ФОТОГРАФ</h3>
           <h1 class="preview__title">Stasia <br> San dul </h1>
@@ -178,21 +178,27 @@
     </section>
 
     <section class="sign-up">
+      <h2 class="sign-up__title">ЗАПИСАТСЯ НА СЪЕМКУ</h2>
 
-      <form class=" sign-up__form" action="">
-        <h2 class="sign-up__title">ЗАПИСАТСЯ НА СЪЕМКУ</h2>
-        <h3 class="sign-up__subject ">ВЫБЕРЕТЕ ДАТУ СЪЕМКУ</h2>
-          <p class="sign-up__text">Оставте заявку на фотосесию и я свяжусь с вами в течении 1 дня.</p>
 
-          <div class="sign-up__input-box">
-            <input class="sign-up__input" placeholder="Ваше имя" type="text">
-            <input class="sign-up__input" placeholder="Номер телефона" type="tel">
-            <input class="sign-up__input" placeholder="Локация фотосессии" type="text">
-            <input class="sign-up__input" placeholder="Дата фотосесии" type="datetime-local">
-          </div>
+      <div class="sign-up__content ">
+        <!-- <div class="sign-up__calendar"></div> -->
 
-          <button class="sign-up__btn">Записаться</button>
-      </form>
+        <form class="form sign-up__form" action="">
+
+          <h3 class="form__subject sign-up__subject">ВЫБЕРЕТЕ ДАТУ СЪЕМКУ</h2>
+            <p class="form__text sign-up__text">Оставте заявку на фотосесию и я свяжусь с вами в течении 1 дня.</p>
+
+            <div class="form__input-box sign-up__input-box">
+              <input class="form__input sign-up__input" placeholder="Ваше имя" type="text">
+              <input class="form__input sign-up__input" placeholder="Номер телефона" type="tel">
+              <input class="form__input sign-up__input" placeholder="Локация фотосессии" type="text">
+              <!-- <input class="form__input sign-up__input" placeholder="Дата фотосесии" type="datetime-local"> -->
+            </div>
+
+            <button class="form__btn sign-up__btn">Записаться</button>
+        </form>
+      </div>
     </section>
 
     <section class="rates container">
@@ -262,24 +268,29 @@
       </div>
     </section>
 
-    <section class="reviews">
-      <div id="anycomment-app"></div>
-      <!-- <img class="reviews__profile" src="" alt="">
-
-      <div>
-
-        <p class="reviews__text">
-          "Была на фотосессии у Регины дважды и осталась очень довольна! Во-первых с ней легко работать, интересно и
-          весело. Она всегда подскажет какой ракурс лучше и работы получаются прекрасные, спасибо большое)"
-        </p>
-        <div class="reviews__slider">
-          <img src="" alt="">
-          <img src="" alt="">
-        </div>
-        <p>Смотреть больше фото с фотосесии</p>
-      </div> -->
-
+    <section id="anycomment-app" class="reviews container">
+    </section>
   </main>
+  <footer class="footer">
+    <img class="footer__img" src="https://imgholder.ru/400x600/8493a8/adb9ca&text=400x600&font=kelson" alt="">
+
+    <div class="container footer__content">
+
+      <form class="footer__form form" action="">
+        <h3 class="footer__taitle form__taitle">ПОНРАВИЛИСЬ МОИ РОБОТЫ?</h2>
+          <p class="footer__text form__text ">Оставте заявку и я с вами свяжусь</p>
+
+          <div class="form__input-box footer__input-box">
+            <input class="footer__input form__input " placeholder="Ваше имя" type="text">
+            <input class="footer__input form__input " placeholder="Номер телефона" type="tel">
+            <input class="footer__input form__input " placeholder="Локация фотосессии" type="text">
+          </div>
+          <button class="form__btn footer__btn">СВЯЗАТСЯ</button>
+      </form>
+    </div>
+
+  </footer>
+
   <script>
     AnyComment = window.AnyComment || []; AnyComment.Comments = [];
     AnyComment.Comments.push({
@@ -292,8 +303,6 @@
     var sa = document.getElementsByTagName("script")[0];
     sa.parentNode.insertBefore(s, s.nextSibling);
   </script>
-  <footer>
-  </footer>
 
 </body>
 

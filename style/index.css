@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,600;0,700;0,800;1,500&display=swap");
 body::-webkit-scrollbar {
   background: #43474e;
@@ -24,16 +23,38 @@ body {
   box-sizing: border-box;
 }
 
-header {
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  height: 80px;
-  border-bottom: solid 2px #666666;
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
-main {
-  width: 100%;
+.form {
+  display: grid;
+}
+.form__subject {
+  font-size: 20px;
+  font-weight: 600;
+}
+.form__text {
+  font-style: 18px;
+}
+.form__input-box {
+  display: grid;
+}
+.form__input {
+  background: none;
+  padding-top: 30px;
+  padding-left: 5px;
+  font-size: 18px;
+}
+.form__input::-webkit-calendar-picker-indicator {
+  background-image: url("/img/form/calendar-icon.svg");
+}
+.form__btn {
+  font-style: 18px;
 }
 
 button {
@@ -47,12 +68,16 @@ button {
   height: 171px;
 }
 
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+header {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  height: 80px;
+  border-bottom: solid 2px #666666;
+}
+
+main {
+  width: 100%;
 }
 
 .preview {
@@ -146,68 +171,68 @@ button {
   font-weight: 800;
 }
 .sign-up {
+  width: 100%;
   display: grid;
-  justify-content: center;
   background: #000;
   margin-top: 100px;
   padding-left: 16px;
   padding-right: 16px;
+  padding: 60px 0;
+}
+.sign-up__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 70px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.sign-up__calendar {
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 320px;
+  max-height: 320px;
+  background: #5b5f5b;
 }
 .sign-up__form {
+  max-width: 450px;
   display: grid;
-  max-width: 500px;
-  padding: 50px 0;
-  color: white;
-}
-.sign-up__img-background {
-  width: 100vw; /* ширина блока на всю ширину окна */
-  max-width: 100%; /* максимальная ширина блока не должна превышать фиксированную ширину контейнера */
-  margin-left: calc(50% - 50vw); /* позиционирование блока по центру экрана */
-  margin-right: calc(50% - 50vw);
-  background: #000;
+  color: #f3f4f3;
 }
 .sign-up__title {
+  color: #f3f4f3;
   text-align: center;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 800;
 }
 .sign-up__subject {
-  margin-top: 15px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 800;
+  font-size: 28px;
 }
 .sign-up__text {
   margin-top: 40px;
-  font-style: 18px;
 }
 .sign-up__input-box {
-  margin-top: 30px;
-  display: grid;
+  margin-top: 15px;
   gap: 20px;
 }
 .sign-up__input {
-  background: none;
-  border: solid 2px white;
-  padding-top: 30px;
-  padding-left: 5px;
-  color: white;
-  font-size: 18px;
+  color: #f3f4f3;
+  border: solid 2px #f3f4f3;
 }
 .sign-up__input::-moz-placeholder {
-  color: white;
+  font-size: 12px;
+  color: #f3f4f3;
 }
 .sign-up__input::placeholder {
-  color: white;
-}
-.sign-up__input::-webkit-calendar-picker-indicator {
-  background-image: url("/img/sign-up/calendar-icon.svg");
+  font-size: 12px;
+  color: #f3f4f3;
 }
 .sign-up__btn {
-  border: solid white;
   margin-top: 70px;
-  color: white;
-  font-style: 18px;
+  border: solid 2px #f3f4f3;
+  color: #f3f4f3;
 }
 
 .rates {
@@ -272,8 +297,70 @@ button {
 }
 
 .reviews {
-  min-height: 50vw;
+  max-height: 100vh;
+  overflow: auto;
+  margin-top: 100px;
+  border: solid 1px;
 }
+
+.footer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 700px;
+  margin-top: 110px;
+  background: #121312;
+}
+.footer__content {
+  align-self: center;
+  width: 100%;
+}
+.footer__img {
+  width: 70%;
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  filter: blur(3px) brightness(30%);
+}
+.footer__form {
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  max-width: 500px;
+  display: grid;
+  color: rgb(126, 125, 125);
+}
+.footer__taitle {
+  color: white;
+  font-size: 28px;
+}
+.footer__text {
+  font-size: 22px;
+  margin-top: 10px;
+}
+.footer__input-box {
+  margin-top: 50px;
+  gap: 20px;
+}
+.footer__input {
+  color: rgb(126, 125, 125);
+  border: solid 2px rgb(126, 125, 125);
+}
+.footer__input::-moz-placeholder {
+  font-size: 12px;
+  color: rgb(126, 125, 125);
+}
+.footer__input::placeholder {
+  font-size: 12px;
+  color: rgb(126, 125, 125);
+}
+.footer__btn {
+  margin-top: 70px;
+  border: solid 2px rgb(126, 125, 125);
+  color: white;
+  font-size: 20px;
+}
+
 @media screen and (min-width: 992px) {
   .rates__content {
     display: flex;
