@@ -18,11 +18,6 @@ body {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 12px;
-    // overflow-x: hidden;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 .container {
@@ -61,6 +56,17 @@ body {
 
     &__btn {
         font-style: 18px;
+    }
+}
+
+.navigation {
+    display: none;
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 50px;
     }
 }
 
@@ -270,7 +276,6 @@ main {
 
 .rates {
     position: relative;
-    min-height: 100vh;
     &__title {
         margin-top: 100px;
         text-align: center;
@@ -310,12 +315,18 @@ main {
     &__list {
         display: grid;
         margin-top: 35px;
+
         gap: 20px;
     }
     &__sheet-element {
         display: flex;
+
         justify-content: space-between;
     }
+    &__sheet-element > p {
+        width: max-content;
+    }
+
     &__price {
         margin-top: 70px;
         width: 250px;
@@ -345,26 +356,54 @@ main {
 }
 
 .footer {
-    position: relative;
     display: flex;
     width: 100%;
-    height: 700px;
+    height: 100%;
 
-    margin-top: 110px;
+    position: relative;
+    z-index: 0;
 
+    margin-top: 100px;
     background: #121312;
+
+    & a {
+        color: #b6b4b4;
+    }
+
+    & a:hover {
+        color: white;
+    }
+
     &__content {
         align-self: center;
         width: 100%;
+        margin-top: 100px;
+    }
+
+    &__img-box {
+        z-index: -1;
+        position: absolute;
+        display: flex;
+        overflow: hidden;
+
+        width: max-content;
+        max-width: 100%;
+        height: 100%;
+    }
+
+    &__blur {
+        position: absolute;
+        right: -50px;
+
+        width: 150px;
+        height: 120%;
+        background: #121312f5;
+        filter: blur(28px);
     }
 
     &__img {
-        width: 70%;
-        position: absolute;
-        z-index: 0;
         height: 100%;
-
-        filter: blur(3px) brightness(30%);
+        filter: brightness(21%);
     }
 
     &__form {
@@ -373,12 +412,9 @@ main {
         margin-left: auto;
         max-width: 500px;
         display: grid;
-        color: rgb(126, 125, 125);
+        color: #9b9a9a;
     }
-    &__taitle {
-        color: white;
-        font-size: 28px;
-    }
+
     &__text {
         font-size: 22px;
 
@@ -389,19 +425,45 @@ main {
         gap: 20px;
     }
     &__input {
-        color: rgb(126, 125, 125);
-        border: solid 2px rgb(126, 125, 125);
+        color: #9b9a9a;
+        border: solid 2px #9b9a9a;
     }
     &__input::placeholder {
         font-size: 12px;
-        color: rgb(126, 125, 125);
+        color: #9b9a9a;
     }
     &__btn {
         margin-top: 70px;
 
-        border: solid 2px rgb(126, 125, 125);
+        border: solid 2px #9b9a9a;
         color: white;
         font-size: 20px;
+    }
+
+    &__information {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-top: 150px;
+        margin-bottom: 50px;
+        color: #b6b4b4;
+    }
+
+    &__information-title {
+        color: white;
+    }
+
+    &__contacts {
+        display: grid;
+
+        gap: 10px;
+        margin-top: 50px;
+    }
+
+    &__social-networks {
+        display: flex;
+        gap: 30px;
     }
 }
 
@@ -423,6 +485,9 @@ main {
             margin-top: 300px;
         }
     }
+    .navigation {
+        display: flex;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -437,5 +502,3 @@ main {
         font-size: 16px;
     }
 }
-
-//

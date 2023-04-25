@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/normalize.css">
   <link rel="stylesheet" href="style/index.css">
   <title>фотограф</title>
 </head>
@@ -268,11 +268,16 @@
       </div>
     </section>
 
-    <section id="anycomment-app" class="reviews container">
+    <section class="reviews container" id="anycomment-app">
     </section>
   </main>
+
   <footer class="footer">
-    <img class="footer__img" src="https://imgholder.ru/400x600/8493a8/adb9ca&text=400x600&font=kelson" alt="">
+
+    <div class="footer__img-box">
+      <img class="footer__img" src="https://imgholder.ru/400x600/8493a8/adb9ca&text=400x600&font=kelson" alt="">
+      <div class="footer__blur"></div>
+    </div>
 
     <div class="container footer__content">
 
@@ -287,6 +292,36 @@
           </div>
           <button class="form__btn footer__btn">СВЯЗАТСЯ</button>
       </form>
+
+
+      <div class="footer__information">
+
+        <div class="footer__contact-information">
+          <h2 class="footer__information-title">КОНТАКТЫ</h2>
+          <ul class="footer__contacts">
+            <li><a href="tel:+18475555555">1-847-555-5555</a></li>
+            <li><a href="mailto:StasiaSandul@gmail.com">StasiaSandul@gmail.com</a> </li>
+          </ul>
+        </div>
+
+        <nav class="navigation container">
+          <ul class="navigation__content">
+            <li><a class="" href="#">Обо мне</a></li>
+            <li><a class="" href="#">Портфолио</a></li>
+            <li><a class="" href="#">Этапы работы</a></li>
+            <li><a class="" href="#">Тарифы</a></li>
+            <li><a class="" href="#">Отзывы</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__social-networks">
+          <li><a href="#"><img src="img/footer/social-networks/Telegram.svg" alt="T"></a></li>
+          <li><a href="#"><img src="img/footer/social-networks/Instagram.svg" alt="I"></a></li>
+          <li><a href="#"><img src="img/footer/social-networks/WhatsApp.svg" alt="W"></a></li>
+        </div>
+      </div>
+
+
     </div>
 
   </footer>
@@ -303,6 +338,7 @@
     var sa = document.getElementsByTagName("script")[0];
     sa.parentNode.insertBefore(s, s.nextSibling);
   </script>
+
 
 </body>
 
