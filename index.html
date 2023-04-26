@@ -14,11 +14,11 @@
 
 <body>
   <main>
-    <!-- <header class="header">
+    <header class="header">
       <div></div>
-      <img class="header__logo" src="" alt="logo">
+      <!-- <img class="header__logo" src="" alt="logo"> -->
 
-      <menu class="header__menu">
+      <!-- <menu class="header__menu">
         <ul>
           <li><a class="" href="#">Обо мне</a></li>
           <li><a class="" href="#">Портфолио</a></li>
@@ -26,31 +26,33 @@
           <li><a class="" href="#">Тарифы</a></li>
           <li><a class="" href="#">Отзывы</a></li>
         </ul>
-      </menu>
+      </menu> -->
 
-      <ul class="header__contact-information">
+      <!-- <ul class="header__contact-information">
         <li class="header__city">Хайфа</li>
         <li class="header__phone">+972 58 442 2027</li>
-      </ul>
-    </header> -->
+      </ul> -->
+    </header>
 
-    <section class="preview container">
-      <div class=" preview--positioning">
-        <div class="preview__box">
+    <section class="preview ">
+      <img class="preview__img" src="img/Обои.jpg" alt="Фотография фотогрфа">
+      <!-- <img class="preview__img" src="https://imgholder.ru/400x600/8493a8/adb9ca&text=400x600&font=kelson"
+      alt="Фотография фотогрфа"> -->
+
+      <div class="preview__content">
+        <div class="preview__text-box">
           <h3 class="preview__subtitle">ФОТОГРАФ</h3>
-          <h1 class="preview__title">Stasia <br> San dul </h1>
+          <h1 class="preview__title">Stasia Sandul </h1>
 
+          <button class="preview__btn">Записатся на фотосесию</button>
         </div>
+
         <ul class="preview__social-networks">
-          <li><img src="img/preview/social-networks/Telegram.svg" alt="T"></li>
-          <li><img src="img/preview/social-networks/Instagram.svg" alt="I"></li>
-          <li><img src="img/preview/social-networks/WhatsApp.svg" alt="W"></li>
+          <li><a href="#"><img src="img/preview/social-networks/Telegram.svg" alt="T"></a></li>
+          <li><a href="#"><img src="img/preview/social-networks/Instagram.svg" alt="I"></a></li>
+          <li><a href="#"><img src="img/preview/social-networks/WhatsApp.svg" alt="W"></a></li>
         </ul>
       </div>
-
-      <button class="preview__btn">Записатся на фотосесию</button>
-      <img class="preview__img" src="https://imgholder.ru/400x600/8493a8/adb9ca&text=400x600&font=kelson"
-        alt="Фотография фотогрфа">
     </section>
 
     <!--  <section class="container about-me ">
@@ -124,7 +126,10 @@
     </section> -->
 
     <section class="stages-of-work container">
-      <h2 class="stages-of-work__title">ЭТАПЫ РАБОТЫ</h2>
+
+      <h2 class="stages-of-work__title">
+        <a name="stages-of-work">ЭТАПЫ РАБОТЫ</a>
+      </h2>
 
       <div class="stages-of-work__box">
         <img class="img" src="https://imgholder.ru/150x200/8493a8/adb9ca&text=150x200&font=kelson" alt="">
@@ -203,7 +208,11 @@
 
     <section class="rates container">
       <img class="rates__logo" src="" alt="логотип">
-      <h2 class="rates__title">ТАРИФЫ</h2>
+
+      <h2 class="rates__title">
+        <a name="rates">ТАРИФЫ</a>
+      </h2>
+
       <div class="rates__content">
 
         <div class="rates__box rates__margin-top-100">
@@ -269,6 +278,7 @@
     </section>
 
     <section class="reviews container" id="anycomment-app">
+      <a name="reviews"></a>
     </section>
   </main>
 
@@ -308,9 +318,9 @@
           <ul class="navigation__content">
             <li><a class="" href="#">Обо мне</a></li>
             <li><a class="" href="#">Портфолио</a></li>
-            <li><a class="" href="#">Этапы работы</a></li>
-            <li><a class="" href="#">Тарифы</a></li>
-            <li><a class="" href="#">Отзывы</a></li>
+            <li><a class="" href="#stages-of-work">Этапы работы</a></li>
+            <li><a class="" href="#rates">Тарифы</a></li>
+            <li><a class="" href="#reviews">Отзывы</a></li>
           </ul>
         </nav>
 
