@@ -94,7 +94,7 @@ main {
 
 .preview {
   max-width: 1200px;
-  height: 100vh;
+  height: 90vh;
   max-height: 800px;
   margin: auto;
   display: grid;
