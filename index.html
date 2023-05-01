@@ -7,37 +7,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/normalize.css">
   <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="style/media.css">
   <title>фотограф</title>
 </head>
 
 
-
 <body>
-  <main>
-    <header class="header">
-      <div></div>
-      <!-- <img class="header__logo" src="" alt="logo"> -->
+  <!-- <header class="header">
+    <div class="header__content container">
 
-      <!-- <menu class="header__menu">
-        <ul>
+      <img class="header__logo" src="" alt="logo">
+
+      <nav class="navigation">
+        <ul class="navigation__content">
           <li><a class="" href="#">Обо мне</a></li>
-          <li><a class="" href="#">Портфолио</a></li>
-          <li><a class="" href="#">Этапы работы</a></li>
-          <li><a class="" href="#">Тарифы</a></li>
-          <li><a class="" href="#">Отзывы</a></li>
+          <li><a class="" href="#portfolio">Портфолио</a></li>
+          <li><a class="" href="#stages-of-work">Этапы работы</a></li>
+          <li><a class="" href="#rates">Тарифы</a></li>
+          <li><a class="" href="#reviews">Отзывы</a></li>
         </ul>
-      </menu> -->
+      </nav>
 
-      <!-- <ul class="header__contact-information">
-        <li class="header__city">Хайфа</li>
-        <li class="header__phone">+972 58 442 2027</li>
-      </ul> -->
-    </header>
+      <ul class="header__contacts">
+        <li class="header__contacts-item">Хайфа</li>
+        <li class="header__contacts-item"><a href="tel:+18475555555">1-847-555-5555</a></li>
+      </ul>
 
+    </div>
+  </header>
+   -->
+  <main>
     <section class="preview ">
       <img class="preview__img" src="img/Обои.jpg" alt="Фотография фотогрфа">
-      <!-- <img class="preview__img" src="https://imgholder.ru/400x600/8493a8/adb9ca&text=400x600&font=kelson"
-      alt="Фотография фотогрфа"> -->
 
       <div class="preview__content">
         <div class="preview__text-box">
@@ -105,25 +106,48 @@
 
     </section> -->
 
-    <!-- <section class="portfolio">
-      <ul>
-        <li>Все</li>
-        <li>Про любовь</li>
-        <li>Портрет</li>
-        <li>Семейная съемка</li>
+    <section class="portfolio container">
+
+      <img class="portfolio__main-img"
+        src="https://mykaleidoscope.ru/uploads/posts/2021-11/1636702994_118-mykaleidoscope-ru-p-obraz-devushki-devushka-krasivo-foto-128.jpg"
+        alt="">
+
+      <h2 class="portfolio__title">
+        <a name="portfolio">Портфолео</a>
+      </h2>
+
+      <ul class="portfolio__menu">
+        <li class="portfolio__item">Все</li>
+        <li class="portfolio__item">Про любовь</li>
+        <li class="portfolio__item">Портрет</li>
+        <li class="portfolio__item">Семейная съемка</li>
       </ul>
 
-      <div>
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-      </div>
+      <ul class="portfolio__img-box">
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://vsegda-pomnim.com/uploads/posts/2022-04/1649110701_38-vsegda-pomnim-com-p-fotosessiya-na-prirode-foto-47.jpg"
+            alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666300122_71-mykaleidoscope-ru-p-stilnie-vyazanie-kofti-zhenskie-oboi-74.jpg"
+            alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://i.pinimg.com/originals/45/42/c1/4542c1bf6e2238d70efc44b96a6bfd78.jpg" alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://avatars.dzeninfra.ru/get-zen_doc/1567507/pub_6169a56d830313466709af4a_6169ac523ed60a34562e7d57/scale_1200"
+            alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666248139_50-mykaleidoscope-ru-p-originalnie-kartinki-krasivo-54.jpg"
+            alt="">
+        </li>
+      </ul>
 
-      <button>Смотреть больше</button>
-    </section> -->
+      <button class="portfolio__btn">Смотреть больше</button>
+    </section>
+
 
     <section class="stages-of-work container">
 
@@ -131,18 +155,21 @@
         <a name="stages-of-work">ЭТАПЫ РАБОТЫ</a>
       </h2>
 
-      <div class="stages-of-work__box">
-        <img class="img" src="https://imgholder.ru/150x200/8493a8/adb9ca&text=150x200&font=kelson" alt="">
+
+      <div class="stages-of-work__box ">
+        <img class="img" src="https://imgholder.ru/150x200/8493a8/adb9ca&text=картинка&font=kelson" alt="">
+
         <div class="stages-of-work__content">
           <h3 class="stages-of-work__box-title">1.ЗНАКОМСТВО</h3>
           <p class="stages-of-work__box-text">
             Чтобы наша с вами съемка прошла легко и весело, нам нужно узнать друг друга по ближе.
           </p>
         </div>
+
       </div>
 
-      <div class="stages-of-work__box ">
-        <img class="img" src="https://imgholder.ru/150x200/8493a8/adb9ca&text=150x200&font=kelson" alt="">
+      <div class="stages-of-work__box">
+        <img class="img" src="https://imgholder.ru/150x200/8493a8/adb9ca&text=картинка&font=kelson" alt="">
 
         <div class="stages-of-work__content">
           <h3 class="stages-of-work__box-title">2.КОНЦЕПЦИЯ</h3>
@@ -155,8 +182,8 @@
 
       </div>
 
-      <div class="stages-of-work__box stages-of-work__box--reverse">
-        <img class="img" src="https://imgholder.ru/150x200/8493a8/adb9ca&text=150x200&font=kelson" alt="">
+      <div class="stages-of-work__box ">
+        <img class="img" src="https://imgholder.ru/150x200/8493a8/adb9ca&text=картинка&font=kelson" alt="">
 
         <div class="stages-of-work__content">
           <h3 class="stages-of-work__box-title">3.СЬЁМКА</h3>
@@ -168,8 +195,8 @@
         </div>
       </div>
 
-      <div class="stages-of-work__box stages-of-work__box--reverse">
-        <img class="img" src="https://imgholder.ru/150x200/8493a8/adb9ca&text=150x200&font=kelson" alt="">
+      <div class="stages-of-work__box">
+        <img class="img" src="https://imgholder.ru/150x200/8493a8/adb9ca&text=картинка&font=kelson" alt="">
 
         <div class="stages-of-work__content">
           <h3 class="stages-of-work__box-title">4.РЕЗУЛЬТАТ</h3>
@@ -209,7 +236,7 @@
     <section class="rates container">
       <img class="rates__logo" src="" alt="логотип">
 
-      <h2 class="rates__title">
+      <h2>
         <a name="rates">ТАРИФЫ</a>
       </h2>
 
@@ -234,7 +261,6 @@
           <p class="rates__price">5000 Р</p>
           <button class="rates__btn">ЗАПИСАТЬСЯ</button>
         </div>
-
         <div class="rates__box rates__margin-top-200">
           <h3 class="rates__box-title">ПОРТРЕТ</h3>
           <ul class="rates__list">
@@ -254,7 +280,6 @@
           <p class="rates__price">5000 Р</p>
           <button class="rates__btn">ЗАПИСАТЬСЯ</button>
         </div>
-
         <div class="rates__box rates__margin-top-300">
           <h3 class="rates__box-title">ПОРТРЕТ</h3>
           <ul class="rates__list">
@@ -277,9 +302,42 @@
       </div>
     </section>
 
-    <section class="reviews container" id="anycomment-app">
-      <a name="reviews"></a>
-    </section>
+
+    <!-- <section class="reviews container">
+      <h2>
+        <a name="reviews">ОТЗЫВЫ</a>
+      </h2>
+
+      <div class="reviews__container">
+        <img class="reviews__main-img" src="https://imgholder.ru/150x200/8493a8/adb9ca&text=картинка&font=kelson"
+          alt="">
+
+        <div class="reviews__content">
+          <p class="reviews__text">
+            "Была на фотосессии у Регины дважды и осталась очень
+            довольна! Во-первых с ней легко работать, интересно и
+            весело. Она всегда подскажет какой ракурс лучше и работы
+            получаются прекрасные, спасибо большое)"
+
+          </p>
+
+          <div class="reviews__img-box">
+            <img class="reviews__secondary-img"
+              src="https://imgholder.ru/150x200/8493a8/adb9ca&text=картинка&font=kelson" alt="">
+            <img class="reviews__secondary-img"
+              src="https://imgholder.ru/150x200/8493a8/adb9ca&text=картинка&font=kelson" alt="">
+
+          </div>
+
+          <small class="reviews__small">
+            <a href="">Смотреть больше фото с фотосесии</a>
+          </small>
+        </div>
+
+      </div>
+
+      <div id="anycomment-app"> </div>
+    </section> -->
   </main>
 
   <footer class="footer">
@@ -317,7 +375,7 @@
         <nav class="navigation container">
           <ul class="navigation__content">
             <li><a class="" href="#">Обо мне</a></li>
-            <li><a class="" href="#">Портфолио</a></li>
+            <li><a class="" href="#portfolio">Портфолио</a></li>
             <li><a class="" href="#stages-of-work">Этапы работы</a></li>
             <li><a class="" href="#rates">Тарифы</a></li>
             <li><a class="" href="#reviews">Отзывы</a></li>
