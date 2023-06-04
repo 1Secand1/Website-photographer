@@ -8,17 +8,31 @@
   <link rel="stylesheet" href="style/normalize.css">
   <link rel="stylesheet" href="style/index.css">
   <link rel="stylesheet" href="style/media.css">
+  <link rel="stylesheet" href="style/burger menu.css">
+  <script defer src="script.js"></script>
   <title>фотограф</title>
 </head>
 
 
 <body>
+  <div class="burger-menu">
+    <nav class="burger-menu__navigation">
+      <ul class="burger-menu__navigation-content navigation__content">
+        <li><a class="burger-menu__сatigories" href="#">Обо мне</a></li>
+        <li><a class="burger-menu__сatigories" href="#portfolio">Портфолио</a></li>
+        <li><a class="burger-menu__сatigories" href="#stages-of-work">Этапы работы</a></li>
+        <li><a class="burger-menu__сatigories" href="#rates">Тарифы</a></li>
+        <li><a class="burger-menu__сatigories" href="#reviews">Отзывы</a></li>
+      </ul>
+    </nav>
+  </div>
+
   <header class="header">
     <div class="header__content container">
 
       <img class="header__logo" src="" alt="logo">
 
-      <nav class="navigation">
+      <nav class="header__navigation navigation">
         <ul class="navigation__content">
           <li><a class="" href="#">Обо мне</a></li>
           <li><a class="" href="#portfolio">Портфолио</a></li>
@@ -31,6 +45,29 @@
       <ul class="header__contacts">
         <li class="header__contacts-item">Хайфа</li>
         <li class="header__contacts-item"><a href="tel:+18475555555">1-847-555-5555</a></li>
+        <li class="header__contacts-item header__burger">
+          <label class="toggle">
+            <input class="trigger" type="checkbox">
+            <div>
+              <div>
+                <span></span>
+                <span></span>
+              </div>
+              <svg>
+                <use xlink:href="#path">
+              </svg>
+              <svg>
+                <use xlink:href="#path">
+              </svg>
+            </div>
+          </label>
+
+          <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="path">
+              <path d="M22,22 L2,22 C2,11 11,2 22,2 C33,2 42,11 42,22"></path>
+            </symbol>
+          </svg>
+        </li>
       </ul>
 
     </div>
@@ -56,18 +93,12 @@
       </div>
     </section>
 
-    <!--  <section class="container about-me ">
+    <section class="container about-me ">
       <h2 class="about-me__title">ОБО МНЕ</h2>
 
-      <div class="about-me__photos-first-block">
-        <img class="img about-me__photos-first-block--right-shift"
-          src="https://imgholder.ru/200x300/8493a8/adb9ca&text=200x300&font=kelson" alt="">
 
-        <img class="img about-me__photos-first-block--upward-shift"
-          src="https://imgholder.ru/200x300/8493a8/adb9ca&text=200x300&font=kelson" alt="">
-      </div>
+      <div class="about-me__text-box">
 
-      <div class="about-me__test-first-block">
         <p>
           Привет! Меня зовут Регина, я профессиональный фотограф в
           г. Калининград.
@@ -80,50 +111,111 @@
           расскажу как справиться со стрессом и о многих других моментах,
           которые помогут получить вам максимум от фотосессии!
         </p>
-      </div>
 
-      <div class="about-me__photos-second-block">
-        <img class="img" src="https://imgholder.ru/200x300/8493a8/adb9ca&text=200x300&font=kelson" alt="">
-      </div>
-
-
-      <div class="about-me__test-second-block">
         <p>
           Также вместе со мной подберём крутой образ и локацию, которая подчеркнёт ваши преимущества. Я помогу вам и
           вашему партнеру раскрыть свои самые чувственные стороны и украдкой прослежу за вашей любовью.
-        </p>
-
-        <p>
           Я помогу вам и вашему партнеру раскрыть свои самые чувственные стороны и украдкой прослежу за вашей любовью.
         </p>
 
+        <p>
+          Если вы хотите увидеть со стороны насколько вы чувственный и прекрасный
+          человек, тогда предлагаю свою помощь в этом!
+        </p>
       </div>
 
-      <p class="about-me__test-third-block">
-        Если вы хотите увидеть со стороны насколько вы чувственный и прекрасный
-        человек, тогда предлагаю свою помощь в этом!
-      </p>
-
-    </section> -->
+    </section>
 
     <section class="portfolio container">
 
-      <img class="portfolio__main-img"
-        src="https://mykaleidoscope.ru/uploads/posts/2021-11/1636702994_118-mykaleidoscope-ru-p-obraz-devushki-devushka-krasivo-foto-128.jpg"
-        alt="">
+
 
       <h2 class="portfolio__title">
         <a name="portfolio">Портфолео</a>
       </h2>
 
       <ul class="portfolio__menu">
-        <li class="portfolio__item">Все</li>
-        <li class="portfolio__item">Про любовь</li>
-        <li class="portfolio__item">Портрет</li>
-        <li class="portfolio__item">Семейная съемка</li>
+        <li class="portfolio__item" onclick="activateTabs('all','portfolio__img-box')">Все</li>
+        <li class="portfolio__item" onclick="activateTabs('aboutLove','portfolio__img-box')">Про любовь</li>
+        <li class="portfolio__item" onclick="activateTabs('portrait','portfolio__img-box')">Портрет</li>
+        <li class="portfolio__item" onclick="activateTabs('familyShooting','portfolio__img-box')">Семейная съемка</li>
       </ul>
 
-      <ul class="portfolio__img-box">
+      <ul class="portfolio__img-box" style="display: grid;" id="all">
+        <li class="portfolio__img img-none"> <img class="portfolio__thumbnail-picture"
+            src="https://mykaleidoscope.ru/uploads/posts/2021-11/1636702994_118-mykaleidoscope-ru-p-obraz-devushki-devushka-krasivo-foto-128.jpg"
+            alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://vsegda-pomnim.com/uploads/posts/2022-04/1649110701_38-vsegda-pomnim-com-p-fotosessiya-na-prirode-foto-47.jpg"
+            alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666300122_71-mykaleidoscope-ru-p-stilnie-vyazanie-kofti-zhenskie-oboi-74.jpg"
+            alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://i.pinimg.com/originals/45/42/c1/4542c1bf6e2238d70efc44b96a6bfd78.jpg" alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://avatars.dzeninfra.ru/get-zen_doc/1567507/pub_6169a56d830313466709af4a_6169ac523ed60a34562e7d57/scale_1200"
+            alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666248139_50-mykaleidoscope-ru-p-originalnie-kartinki-krasivo-54.jpg"
+            alt="">
+        </li>
+      </ul>
+
+      <ul class="portfolio__img-box" id="aboutLove">
+        <li class="portfolio__img img-none"> <img class="portfolio__thumbnail-picture"
+            src="https://i.pinimg.com/originals/ca/4a/20/ca4a2025bc085610c8f5bd32465bd4e6.jpg" alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://stihi.ru/pics/2017/03/05/6710.jpg" alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://rugraphics.ru/wp-content/uploads/less_phot/animaciya-padayushchego-snega-v-photoshop/volshebnyy-zakat-dobavlenie-luchey-solnechnogo-sveta-1.jpg"
+            alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://i.pinimg.com/originals/ec/21/16/ec211630f3ee9837cc36fa75980c3de8.jpg" alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://i.pinimg.com/736x/d6/fd/71/d6fd712201345871a0cb26c1e8f614e5.jpg" alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://proza.ru/pics/2022/08/07/1375.jpg" alt="">
+        </li>
+      </ul>
+
+      <ul class="portfolio__img-box" id="portrait">
+        <li class="portfolio__img img-none"> <img class="portfolio__thumbnail-picture"
+            src="https://mykaleidoscope.ru/uploads/posts/2021-11/1636702994_118-mykaleidoscope-ru-p-obraz-devushki-devushka-krasivo-foto-128.jpg"
+            alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://vsegda-pomnim.com/uploads/posts/2022-04/1649110701_38-vsegda-pomnim-com-p-fotosessiya-na-prirode-foto-47.jpg"
+            alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666300122_71-mykaleidoscope-ru-p-stilnie-vyazanie-kofti-zhenskie-oboi-74.jpg"
+            alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://i.pinimg.com/originals/45/42/c1/4542c1bf6e2238d70efc44b96a6bfd78.jpg" alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://avatars.dzeninfra.ru/get-zen_doc/1567507/pub_6169a56d830313466709af4a_6169ac523ed60a34562e7d57/scale_1200"
+            alt="">
+        </li>
+        <li class="portfolio__img"> <img class="portfolio__thumbnail-picture"
+            src="https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666248139_50-mykaleidoscope-ru-p-originalnie-kartinki-krasivo-54.jpg"
+            alt="">
+        </li>
+      </ul>
+
+      <ul class="portfolio__img-box" id="familyShooting">
         <li class="portfolio__img img-none"> <img class="portfolio__thumbnail-picture"
             src="https://mykaleidoscope.ru/uploads/posts/2021-11/1636702994_118-mykaleidoscope-ru-p-obraz-devushki-devushka-krasivo-foto-128.jpg"
             alt="">
@@ -238,15 +330,16 @@
     </section>
 
     <section class="rates container">
-      <img class="rates__logo" src="" alt="логотип">
 
       <h2>
         <a name="rates">ТАРИФЫ</a>
       </h2>
 
+      <img class="rates__logo" src="" alt="логотип">
       <div class="rates__content">
 
-        <div class="rates__box rates__margin-top-100">
+
+        <div class="rates__box">
           <h3 class="rates__box-title">ПОРТРЕТ</h3>
           <ul class="rates__list">
             <li class="rates__sheet-element">
@@ -265,7 +358,8 @@
           <p class="rates__price">5000 Р</p>
           <button class="rates__btn">ЗАПИСАТЬСЯ</button>
         </div>
-        <div class="rates__box rates__margin-top-200">
+
+        <div class="rates__box">
           <h3 class="rates__box-title">ПОРТРЕТ</h3>
           <ul class="rates__list">
             <li class="rates__sheet-element">
@@ -284,7 +378,8 @@
           <p class="rates__price">5000 Р</p>
           <button class="rates__btn">ЗАПИСАТЬСЯ</button>
         </div>
-        <div class="rates__box rates__margin-top-300">
+
+        <div class="rates__box">
           <h3 class="rates__box-title">ПОРТРЕТ</h3>
           <ul class="rates__list">
             <li class="rates__sheet-element">
@@ -303,8 +398,10 @@
           <p class="rates__price">5000 Р</p>
           <button class="rates__btn">ЗАПИСАТЬСЯ</button>
         </div>
+
       </div>
     </section>
+
 
 
     <section class="reviews container">
@@ -372,7 +469,7 @@
           </ul>
         </div>
 
-        <nav class="navigation container">
+        <!-- <nav class="navigation container">
           <ul class="navigation__content">
             <li><a class="" href="#">Обо мне</a></li>
             <li><a class="" href="#portfolio">Портфолио</a></li>
@@ -380,7 +477,7 @@
             <li><a class="" href="#rates">Тарифы</a></li>
             <li><a class="" href="#reviews">Отзывы</a></li>
           </ul>
-        </nav>
+        </nav> -->
 
         <div class="footer__social-networks">
           <li><a href="#"><img src="img/footer/social-networks/Telegram.svg" alt="T"></a></li>
@@ -406,8 +503,6 @@
     var sa = document.getElementsByTagName("script")[0];
     sa.parentNode.insertBefore(s, s.nextSibling);
   </script>
-
-
 </body>
 
 </html>

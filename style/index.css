@@ -17,6 +17,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 12px;
+  overflow: auto;
 }
 
 .container {
@@ -54,14 +55,18 @@ body {
 }
 
 .navigation {
-  display: none;
+  width: 100%;
 }
 .navigation__content {
   width: 100%;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
   text-align: center;
-  gap: 50px;
+  row-gap: 5px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  padding: 0 10px;
 }
 
 button {
@@ -96,6 +101,8 @@ h2 {
   display: flex;
   width: 100%;
   height: 70px;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   position: fixed;
   top: 0;
   z-index: 1;
@@ -105,6 +112,7 @@ h2 {
   color: #000;
 }
 .header__logo {
+  min-width: 50px;
   height: 100%;
 }
 .header__content {
@@ -117,16 +125,47 @@ h2 {
   height: 100%;
   display: flex;
 }
+.header__navigation {
+  display: none;
+}
 .header__contacts-item {
+  width: -moz-max-content;
+  width: max-content;
   height: 100%;
   display: grid;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 20px;
   border-left: solid 1px;
   border-right: solid 1px;
 }
 .header__contacts-item:last-child {
   border-left: none;
+}
+
+.burger-menu {
+  z-index: 1;
+  position: fixed;
+  left: 100vw;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  overflow-y: hidden;
+  transition: left 0.5s ease-in;
+  font-size: 18px;
+}
+.burger-menu--active {
+  left: 0;
+}
+.burger-menu__navigation {
+  margin-top: 100px;
+  margin-left: 50px;
+}
+.burger-menu__navigation-content {
+  height: 100%;
+  display: grid;
+  justify-content: start;
+  text-align: left;
+  row-gap: 35px;
 }
 
 main {
@@ -209,11 +248,6 @@ main {
   justify-content: center;
   margin-top: 100px;
 }
-.portfolio__main-img {
-  width: 100%;
-  display: none;
-  padding-right: 20px;
-}
 .portfolio__menu {
   display: flex;
   flex-wrap: wrap;
@@ -227,12 +261,13 @@ main {
   padding: 10px 0px;
   border-radius: 2px;
   border-bottom: solid 3px rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 .portfolio__item:hover {
   border-bottom: solid 3px #000;
 }
 .portfolio__img-box {
-  display: grid;
+  display: none;
   grid-template-columns: 2fr 1.5fr;
   grid-template-rows: repeat(4, 0.5fr);
   gap: 5px;
@@ -269,6 +304,18 @@ main {
   margin-top: 50px;
   font-size: 18px;
   font-weight: 600;
+}
+
+.about-me {
+  margin-top: 100px;
+  line-height: 180%;
+  font-family: "Montserrat", sans-serif;
+}
+.about-me__img {
+  float: left;
+}
+.about-me__text-box {
+  margin-top: 24px;
 }
 
 .stages-of-work {
@@ -372,11 +419,13 @@ main {
   color: #f3f4f3;
 }
 
+.rates {
+  margin-top: 50px;
+}
 .rates__content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 50px;
   height: 100%;
   gap: 60px;
 }
@@ -441,7 +490,8 @@ main {
   margin-top: 50px;
 }
 .reviews__main-img {
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   height: 550px;
   margin: auto;
   margin-top: 20px;
@@ -568,16 +618,7 @@ main {
 }
 .footer__social-networks {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
-}
-
-@media screen and (min-width: 1200px) {
-  .test {
-    min-width: 1140px;
-  }
-}
-@media screen and (min-width: 576px) {
-  .test {
-    min-width: 540px;
-  }
 }
