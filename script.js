@@ -22,16 +22,16 @@ function activateTabs(tabId, tabsWrapClass) {
 }
 
 function switchBurgerMenu(
-  classWrapper,
+  elementСlass,
   activationClass,
   classTrigger,
   additionalActivatingClass
 ) {
-  if (!classWrapper || !activationClass || !classTrigger) {
+  if (!elementСlass || !activationClass || !classTrigger) {
     throw new Error("class is undefined");
   }
 
-  const wrapper = document.querySelector(`.${classWrapper}`);
+  const wrapper = document.querySelector(`.${elementСlass}`);
   const trigger = document.querySelector(`.${classTrigger}`);
 
   trigger.addEventListener("click", () => {
@@ -55,3 +55,5 @@ switchBurgerMenu(
   "trigger",
   "burger-menu__сatigories"
 );
+
+

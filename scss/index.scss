@@ -75,11 +75,22 @@ body {
     }
 }
 
-button {
+button,
+.button {
     padding: 20px;
+
     background: none;
+    border: solid 2px #0c0808;
+
     cursor: pointer;
-    border: solid 2px #696464;
+    transition: color 0.4s ease-in, border 0.4s ease-in;
+
+    @media (pointer: fine) {
+        &:hover {
+            color: rgb(129, 129, 129);
+            border: solid 2px rgb(129, 129, 129);
+        }
+    }
 }
 
 .img {
@@ -114,6 +125,11 @@ h2 {
 
     & a {
         color: #000;
+        @media (pointer: fine) {
+            &:hover {
+                color: rgb(136, 115, 115);
+            }
+        }
     }
 
     &__logo {
@@ -148,7 +164,6 @@ h2 {
     }
 }
 .burger-menu {
-
     z-index: 1;
     position: fixed;
     left: 100vw;
@@ -156,11 +171,10 @@ h2 {
     width: 100vw;
     height: 100vh;
 
-
     background: #ffffff;
 
     overflow-y: hidden;
-    transition: left 0.5s ease-in;
+    transition: left 0.8s ease-in;
 
     font-size: 18px;
 
@@ -181,6 +195,10 @@ h2 {
 
         text-align: left;
         row-gap: 35px;
+    }
+
+    &__сatigories {
+        color: #000;
     }
 }
 
@@ -247,6 +265,7 @@ main {
         font-weight: 400;
         font-size: 16px;
         color: white;
+        border: solid 2px white;
 
         width: 250px;
 
@@ -296,6 +315,7 @@ main {
         border-bottom: solid 3px #00000000;
 
         cursor: pointer;
+        transition: all 0.7s ease-in;
     }
     &__item:hover {
         border-bottom: solid 3px #000;
@@ -432,12 +452,17 @@ main {
     }
 
     &__calendar {
-        margin-top: 0;
         width: 100%;
         height: 100%;
+
         max-width: 320px;
         max-height: 320px;
+
         background: #5b5f5b;
+
+        margin-top: 0;
+        place-items: center;
+        display: none;
     }
 
     &__form {
@@ -452,6 +477,8 @@ main {
 
         font-size: 32px;
         font-weight: 800;
+
+        scroll-margin-top: 125px;
     }
 
     &__subject {
@@ -529,7 +556,6 @@ main {
     &__sheet-element > p {
         width: max-content;
     }
-
     &__price {
         margin-top: 70px;
         width: 250px;
@@ -542,11 +568,14 @@ main {
         font-size: 18px;
         font-weight: 800;
     }
-    &__btn {
+    &__link {
+        padding: 14px 0;
         margin-top: 50px;
+
+        text-align: center;
         font-weight: 600;
         font-size: 18px;
-        padding: 12px 0;
+        color: #000;
     }
 }
 
@@ -617,8 +646,10 @@ main {
         color: #b6b4b4;
     }
 
-    & a:hover {
-        color: white;
+    @media (pointer: fine) {
+        & a:hover {
+            color: white;
+        }
     }
 
     &__content {
@@ -699,6 +730,7 @@ main {
 
     &__information-title {
         color: white;
+        text-align: left;
     }
 
     &__contacts {
@@ -707,11 +739,162 @@ main {
         gap: 10px;
         margin-top: 50px;
     }
+    &__navigation {
+        // width: 60%;
+        display: none;
+    }
 
     &__social-networks {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         gap: 30px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .img {
+        width: 180px;
+        height: 256px;
+    }
+    body {
+        font-size: 16px;
+    }
+    .preview {
+        padding: 0 16px;
+        height: 100%;
+    }
+    .preview__img {
+        width: 400px;
+        height: 600px;
+        margin-top: auto;
+        margin: 0;
+        grid-area: 1/1/2/2;
+    }
+    .preview__content {
+        width: min(40vw, 500px);
+        max-width: 700px;
+        margin-top: 40%;
+        grid-area: 1/2/2/3;
+    }
+    .preview__subtitle {
+        font-size: 24px;
+        font-weight: 400;
+    }
+    .preview__title {
+        max-width: 100%;
+        color: #000;
+        margin-top: 25px;
+        font-weight: 500;
+    }
+    .preview__btn {
+        width: 100%;
+        margin-top: 100px;
+        color: black;
+        border: solid 2px rgb(0, 0, 0);
+        position: static;
+    }
+    .stages-of-work__content {
+        min-width: 265px;
+    }
+    .portfolio__item {
+        padding: 10px 15px;
+    }
+}
+@media screen and (min-width: 820px) {
+    .portfolio {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+    }
+    .portfolio__img-box {
+        display: none;
+        max-height: 700px;
+        min-height: 100%;
+        grid-template-columns: 2fr repeat(3, 1fr);
+        grid-template-rows: 1fr 0.5fr 1fr;
+        gap: 10px;
+    }
+    .portfolio__img:nth-child(1) {
+        grid-area: 1/1/4/2;
+    }
+    .portfolio__img:nth-child(2) {
+        grid-area: 1/3/2/4;
+    }
+    .portfolio__img:nth-child(3) {
+        grid-area: 2/2/4/4;
+    }
+    .portfolio__img:nth-child(4) {
+        grid-area: 1/4/3/5;
+    }
+    .portfolio__img:nth-child(5) {
+        grid-area: 3/4/4/5;
+    }
+    .reviews__img-box {
+        display: flex;
+    }
+    .reviews__main-img {
+        margin-top: 0;
+    }
+    .reviews__text {
+        height: 156px;
+        overflow: auto;
+    }
+    .reviews__container {
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .reviews__content {
+        margin-left: 20px;
+    }
+    .header__content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header__navigation {
+        display: flex;
+    }
+    .header__burger {
+        display: none;
+    }
+    .burger-menu {
+        display: none;
+    }
+    .footer__navigation {
+        display: block;
+    }
+    .sign-up__calendar {
+        display: grid;
+    }
+}
+@media screen and (min-width: 995px) {
+    .rates__content {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .rates__margin-top-100 {
+        margin-top: 100px;
+    }
+    .rates__margin-top-200 {
+        margin-top: 200px;
+    }
+    .rates__margin-top-300 {
+        margin-top: 300px;
+    }
+    .navigation {
+        display: flex;
+    }
+    .stages-of-work__box:nth-of-type(4n + 3),
+    .stages-of-work__box:nth-of-type(4n + 4) {
+        flex-direction: row-reverse;
+    }
+    .reviews__secondary-img:nth-child(2) {
+        display: block;
+    }
+}
+@media screen and (max-width: 995px) {
+    .stages-of-work__box:nth-of-type(2n) {
+        flex-direction: row-reverse;
     }
 }

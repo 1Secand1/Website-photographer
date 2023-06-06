@@ -5,10 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/normalize.css">
-  <link rel="stylesheet" href="style/index.css">
-  <link rel="stylesheet" href="style/media.css">
-  <link rel="stylesheet" href="style/burger menu.css">
+  <link rel="stylesheet" href="/style/normalize.css">
+  <link rel="stylesheet" href="/style/index.css">
+  <link rel="stylesheet" href="/style/burger menu.css">
   <script defer src="script.js"></script>
   <title>фотограф</title>
 </head>
@@ -34,11 +33,11 @@
 
       <nav class="header__navigation navigation">
         <ul class="navigation__content">
-          <li><a class="" href="#">Обо мне</a></li>
-          <li><a class="" href="#portfolio">Портфолио</a></li>
-          <li><a class="" href="#stages-of-work">Этапы работы</a></li>
-          <li><a class="" href="#rates">Тарифы</a></li>
-          <li><a class="" href="#reviews">Отзывы</a></li>
+          <li><a class="navigation__item" href="#">Обо мне</a></li>
+          <li><a class="navigation__item" href="#portfolio">Портфолио</a></li>
+          <li><a class="navigation__item" href="#stages-of-work">Этапы работы</a></li>
+          <li><a class="navigation__item" href="#rates">Тарифы</a></li>
+          <li><a class="navigation__item" href="#reviews">Отзывы</a></li>
         </ul>
       </nav>
 
@@ -75,14 +74,14 @@
 
   <main>
     <section class="preview ">
-      <img class="preview__img" src="img/Обои.jpg" alt="Фотография фотогрфа">
+      <img class="preview__img" src="img/preview__img.jpg" alt="Фотография фотогрфа">
 
       <div class="preview__content">
         <div class="preview__text-box">
           <h3 class="preview__subtitle">ФОТОГРАФ</h3>
           <h1 class="preview__title">Stasia Sandul </h1>
 
-          <button class="preview__btn">Записатся на фотосесию</button>
+          <a href="#sign-up"><button class="preview__btn">Записатся на фотосесию</button></a>
         </div>
 
         <ul class="preview__social-networks">
@@ -306,11 +305,15 @@
     </section>
 
     <section class="sign-up">
-      <h2 class="sign-up__title">ЗАПИСАТСЯ НА СЪЕМКУ</h2>
 
+      <h2>
+        <a class="sign-up__title" name="sign-up">
+          ЗАПИСАТСЯ НА СЪЕМКУ
+        </a>
+      </h2>
 
       <div class="sign-up__content ">
-        <!-- <div class="sign-up__calendar"></div> -->
+        <div class="sign-up__calendar">тут должен быть календарь</div>
 
         <form class="form sign-up__form" action="">
 
@@ -319,7 +322,7 @@
 
             <div class="form__input-box sign-up__input-box">
               <input class="form__input sign-up__input" placeholder="Ваше имя" type="text">
-              <input class="form__input sign-up__input" placeholder="Номер телефона" type="tel">
+              <input class="form__input sign-up__input" placeholder="Номер телефона или" type="tel">
               <input class="form__input sign-up__input" placeholder="Локация фотосессии" type="text">
               <!-- <input class="form__input sign-up__input" placeholder="Дата фотосесии" type="datetime-local"> -->
             </div>
@@ -347,7 +350,7 @@
               <p>24</p>
             </li>
             <li class="rates__sheet-element">
-              <p>КЛИЧЕСТВО ФОТО</p>
+              <p>КОЛИЧЕСТВО ФОТО</p>
               <p>70 ШТ</p>
             </li>
             <li class="rates__sheet-element">
@@ -356,7 +359,8 @@
             </li>
           </ul>
           <p class="rates__price">5000 Р</p>
-          <button class="rates__btn">ЗАПИСАТЬСЯ</button>
+
+          <a href="#sign-up" class="rates__link button">ЗАПИСАТЬСЯ</a>
         </div>
 
         <div class="rates__box">
@@ -376,10 +380,11 @@
             </li>
           </ul>
           <p class="rates__price">5000 Р</p>
-          <button class="rates__btn">ЗАПИСАТЬСЯ</button>
+
+          <a href="#sign-up" class="rates__link button">ЗАПИСАТЬСЯ</a>
         </div>
 
-        <div class="rates__box">
+        <div class="rates__box ">
           <h3 class="rates__box-title">ПОРТРЕТ</h3>
           <ul class="rates__list">
             <li class="rates__sheet-element">
@@ -396,13 +401,13 @@
             </li>
           </ul>
           <p class="rates__price">5000 Р</p>
-          <button class="rates__btn">ЗАПИСАТЬСЯ</button>
+
+          <a href="#sign-up" class="rates__link button">ЗАПИСАТЬСЯ</a>
+
         </div>
 
       </div>
     </section>
-
-
 
     <section class="reviews container">
       <h2>
@@ -451,9 +456,9 @@
           <p class="footer__text form__text ">Оставте заявку и я с вами свяжусь</p>
 
           <div class="form__input-box footer__input-box">
-            <input class="footer__input form__input " placeholder="Ваше имя" type="text">
-            <input class="footer__input form__input " placeholder="Номер телефона" type="tel">
-            <input class="footer__input form__input " placeholder="Локация фотосессии" type="text">
+            <input class="footer__input form__input" placeholder="Ваше имя" type="text">
+            <input class="footer__input form__input" placeholder="Номер телефона" type="tel">
+            <input class="footer__input form__input" placeholder="Локация фотосессии" type="text">
           </div>
           <button class="form__btn footer__btn">СВЯЗАТСЯ</button>
       </form>
@@ -469,7 +474,7 @@
           </ul>
         </div>
 
-        <!-- <nav class="navigation container">
+        <nav class="footer__navigation navigation container">
           <ul class="navigation__content">
             <li><a class="" href="#">Обо мне</a></li>
             <li><a class="" href="#portfolio">Портфолио</a></li>
@@ -477,7 +482,7 @@
             <li><a class="" href="#rates">Тарифы</a></li>
             <li><a class="" href="#reviews">Отзывы</a></li>
           </ul>
-        </nav> -->
+        </nav>
 
         <div class="footer__social-networks">
           <li><a href="#"><img src="img/footer/social-networks/Telegram.svg" alt="T"></a></li>
